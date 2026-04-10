@@ -25,11 +25,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.serah.sokohub.R
+import com.serah.sokohub.ui.navigation.ROUT_HOME
+import com.serah.sokohub.ui.navigation.ROUT_REGISTER
 import com.serah.sokohub.ui.theme.Darkbrown
 
 @Composable
-fun OnBoardingScreen(){
+fun OnBoardingScreen(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -76,7 +80,7 @@ fun OnBoardingScreen(){
             shape = RoundedCornerShape(10.dp),
             colors = ButtonDefaults.buttonColors(Darkbrown),
             modifier = Modifier.width(350.dp),
-            onClick = {}
+            onClick = {navController.navigate(ROUT_REGISTER)}
 
 
         ) {
@@ -194,7 +198,7 @@ fun OnBoardingScreen(){
 @Preview(showBackground = true)
 @Composable
 fun OnBoardingScreenPreview(){
-    OnBoardingScreen()
+    OnBoardingScreen(rememberNavController())
 
 
 

@@ -19,6 +19,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -36,11 +37,16 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.serah.sokohub.R
+import com.serah.sokohub.ui.navigation.ROUT_HOME
+import com.serah.sokohub.ui.navigation.ROUT_LOGIN
+import com.serah.sokohub.ui.navigation.ROUT_REGISTER
 import com.serah.sokohub.ui.theme.Darkbrown
 
 @Composable
-fun LoginScreen(){
+fun LoginScreen(navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -132,12 +138,30 @@ fun LoginScreen(){
 
         Spacer(modifier = Modifier.height(10.dp))
 
+        TextButton(onClick = {navController.navigate(ROUT_REGISTER)}) {
 
-        Text(
-            text = "Don't have an account? Register.",
-            fontSize = 15.sp,
+            Text(
+                text = "Don't have an account? Register.",
+                fontSize = 15.sp,
 
-            )
+                )
+
+
+        }
+
+        TextButton(onClick = {navController.navigate(ROUT_HOME)}) {
+
+            Text(
+                text = "Go to Home.",
+                fontSize = 15.sp,
+
+                )
+
+
+        }
+
+
+
 
 
 
@@ -174,7 +198,7 @@ fun LoginScreen(){
 @Preview(showBackground = true)
 @Composable
 fun LoginScreenPreview(){
-    LoginScreen()
+    LoginScreen(rememberNavController())
 
 
 

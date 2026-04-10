@@ -21,6 +21,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -38,11 +39,14 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.serah.sokohub.R
+import com.serah.sokohub.ui.navigation.ROUT_LOGIN
 import com.serah.sokohub.ui.theme.Darkbrown
 
 @Composable
-fun RegisterScreen(){
+fun RegisterScreen(navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -175,12 +179,18 @@ fun RegisterScreen(){
 
         Spacer(modifier = Modifier.height(10.dp))
 
+        TextButton(onClick = {navController.navigate(ROUT_LOGIN)}) {
 
-        Text(
-            text = "Already have an account? Login.",
-            fontSize = 15.sp,
+            Text(
+                text = "Already have an account? Login.",
+                fontSize = 15.sp,
 
-            )
+                )
+
+        }
+
+
+
 
 
 
@@ -251,7 +261,7 @@ fun RegisterScreen(){
 @Preview(showBackground = true)
 @Composable
 fun RegisterScreenPreview(){
-    RegisterScreen()
+    RegisterScreen(rememberNavController())
 
 
 
