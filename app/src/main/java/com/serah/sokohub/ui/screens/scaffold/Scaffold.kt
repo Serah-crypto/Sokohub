@@ -72,11 +72,11 @@ fun ScaffoldScreen(navController: NavController){
                 containerColor = Darkbrown
             ){
                 NavigationBarItem(
-                    icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
+                    icon = { Icon(Icons.Default.Home, contentDescription = "Home", tint = Color.White) },
                     label = { Text("Home") },
                     selected = selectedIndex == 0,
                     onClick = { selectedIndex = 0
-                        //navController.navigate(ROUT_HOME)
+                    //navController.navigate(ROUT_HOME)
                     }
                 )
                 NavigationBarItem(
@@ -84,7 +84,7 @@ fun ScaffoldScreen(navController: NavController){
                     label = { Text("Favorites") },
                     selected = selectedIndex == 1,
                     onClick = { selectedIndex = 1
-                        // navController.navigate(ROUT_HOME)
+                    // navController.navigate(ROUT_HOME)
                     }
                 )
                 NavigationBarItem(
@@ -92,7 +92,7 @@ fun ScaffoldScreen(navController: NavController){
                     label = { Text("Profile") },
                     selected = selectedIndex == 2,
                     onClick = { selectedIndex = 2
-                        //  navController.navigate(ROUT_HOME)
+                    //  navController.navigate(ROUT_HOME)
                     }
                 )
 
@@ -101,7 +101,7 @@ fun ScaffoldScreen(navController: NavController){
                     label = { Text("Profile") },
                     selected = selectedIndex == 2,
                     onClick = { selectedIndex = 2
-                        //  navController.navigate(ROUT_HOME)
+                    //  navController.navigate(ROUT_HOME)
                     }
                 )
 
@@ -126,9 +126,7 @@ fun ScaffoldScreen(navController: NavController){
 
 
                 //Main Contents of the page
-                Text(text = "Welcome to Homescreen Screen", fontSize = 20.sp)
-                Spacer(modifier = Modifier.height(8.dp))
-                Text("This is where the main content goes.")
+
 
 
 

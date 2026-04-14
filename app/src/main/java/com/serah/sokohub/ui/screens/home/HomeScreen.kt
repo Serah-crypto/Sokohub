@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
@@ -44,6 +45,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.serah.sokohub.R
+import com.serah.sokohub.ui.navigation.ROUT_ABOUT
 import com.serah.sokohub.ui.navigation.ROUT_INTENT
 import com.serah.sokohub.ui.theme.Darkbrown
 
@@ -70,6 +72,16 @@ fun HomeScreen(navController: NavController){
                         contentDescription = "Cart"
                     )
                 }
+
+
+
+                    IconButton(onClick = {navController.navigate(ROUT_ABOUT)}) {
+                        Icon(
+                            imageVector = Icons.Default.Info,
+                            contentDescription = "About"
+                        )
+                    }
+
 
                 IconButton(onClick = {}) {
                     Icon(
