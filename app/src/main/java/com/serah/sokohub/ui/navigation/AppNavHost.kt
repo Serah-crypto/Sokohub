@@ -12,13 +12,15 @@ import com.serah.sokohub.ui.screens.auth.RegisterScreen
 import com.serah.sokohub.ui.screens.home.HomeScreen
 import com.serah.sokohub.ui.screens.intent.IntentScreen
 import com.serah.sokohub.ui.screens.onboarding.OnBoardingScreen
+import com.serah.sokohub.ui.screens.scaffold.ScaffoldScreen
 import com.serah.sokohub.ui.screens.service.ServiceScreen
+import com.serah.sokohub.ui.screens.splash.SplashScreen
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_ONBOARDING
+    startDestination: String = ROUT_SPLASH
 ) {
 
     NavHost(
@@ -46,6 +48,12 @@ fun AppNavHost(
         }
         composable(ROUT_INTENT) {
             IntentScreen(navController)
+        }
+        composable(ROUT_SPLASH) {
+            SplashScreen(navController)
+        }
+        composable(ROUT_SCAFFOLD) {
+            ScaffoldScreen(navController)
         }
 
 

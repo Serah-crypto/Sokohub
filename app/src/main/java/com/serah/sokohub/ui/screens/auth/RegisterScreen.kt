@@ -50,6 +50,7 @@ fun RegisterScreen(navController: NavController){
     Column(
         modifier = Modifier
             .fillMaxSize()
+            //background image
             .paint(painterResource(R.drawable.background), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
