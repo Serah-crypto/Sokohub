@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.serah.sokohub.R
+import com.serah.sokohub.navigation.ROUTE_VIEW_PRODUCTS
 import com.serah.sokohub.navigation.ROUT_ABOUT
 import com.serah.sokohub.navigation.ROUT_INTENT
 import com.serah.sokohub.ui.theme.Darkbrown
@@ -154,7 +155,7 @@ fun HomeScreen(navController: NavController){
                 )
 
                 Button(
-                    onClick = {navController.navigate(ROUT_INTENT)},
+                    onClick = {navController.navigate(ROUTE_VIEW_PRODUCTS)},
                     shape = RoundedCornerShape(10.dp),
                     colors = ButtonDefaults.buttonColors(Darkbrown),
                     modifier = Modifier.padding(start = 20.dp)

@@ -11,7 +11,7 @@ package com.serah.sokohub.network
 
     interface CloudinaryApi {
         @Multipart
-        @POST("v1_1/ds8y1vfji/image/upload")
+        @POST("v1_1/djh792q7l/image/upload")
         suspend fun uploadImage(
             @Part file: MultipartBody.Part,
             @Part("upload_preset") uploadPreset : RequestBody
