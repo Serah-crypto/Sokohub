@@ -28,8 +28,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.serah.sokohub.R
-import com.serah.sokohub.ui.navigation.ROUT_HOME
-import com.serah.sokohub.ui.navigation.ROUT_REGISTER
+import com.serah.sokohub.navigation.ROUT_REGISTER
 import com.serah.sokohub.ui.theme.Darkbrown
 
 @Composable

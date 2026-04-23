@@ -1,17 +1,22 @@
-package com.serah.sokohub.ui.navigation
+package com.serah.sokohub.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.serah.sokohub.ui.screens.about.AboutScreen
 import com.serah.sokohub.ui.screens.auth.LoginScreen
 import com.serah.sokohub.ui.screens.auth.RegisterScreen
 import com.serah.sokohub.ui.screens.home.HomeScreen
 import com.serah.sokohub.ui.screens.intent.IntentScreen
 import com.serah.sokohub.ui.screens.onboarding.OnBoardingScreen
+import com.serah.sokohub.ui.screens.products.AddProductScreen
+import com.serah.sokohub.ui.screens.products.UpdateProductScreen
+import com.serah.sokohub.ui.screens.products.ViewProductScreen
 import com.serah.sokohub.ui.screens.scaffold.ScaffoldScreen
 import com.serah.sokohub.ui.screens.service.ServiceScreen
 import com.serah.sokohub.ui.screens.splash.SplashScreen
@@ -55,6 +60,20 @@ fun AppNavHost(
         composable(ROUT_SCAFFOLD) {
             ScaffoldScreen(navController)
         }
+
+        composable(ROUTE_ADD_PRODUCT) { AddProductScreen(navController) }
+
+        composable(ROUTE_VIEW_PRODUCTS) { ViewProductScreen(navController) }
+
+        composable(
+            ROUTE_UPDATE_PRODUCT,
+            arguments = listOf(navArgument("productId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val productId = backStackEntry.arguments?.getString("productId")!!
+            UpdateProductScreen(navController, productId)
+        }
+
+
 
 
 

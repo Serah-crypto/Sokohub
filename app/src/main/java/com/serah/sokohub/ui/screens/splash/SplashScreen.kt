@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.serah.sokohub.R
-import com.serah.sokohub.ui.navigation.ROUT_ONBOARDING
+import com.serah.sokohub.navigation.ROUT_ONBOARDING
 import com.serah.sokohub.ui.theme.Darkbrown
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

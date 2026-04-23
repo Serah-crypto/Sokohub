@@ -45,8 +45,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.serah.sokohub.R
-import com.serah.sokohub.ui.navigation.ROUT_ABOUT
-import com.serah.sokohub.ui.navigation.ROUT_INTENT
+import com.serah.sokohub.navigation.ROUT_ABOUT
+import com.serah.sokohub.navigation.ROUT_INTENT
 import com.serah.sokohub.ui.theme.Darkbrown
 
 @OptIn(ExperimentalMaterial3Api::class)
